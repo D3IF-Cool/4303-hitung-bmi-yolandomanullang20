@@ -1,4 +1,4 @@
-package org.d3if4303.hitungbmi
+package org.d3if4038.hitungbmi
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -1,4 +1,4 @@
-package org.d3if4303.hitungbmi
+package org.d3if4038.hitungbmi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,7 +6,7 @@ import android.text.TextUtils
 import android.util.Log
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
-import org.d3if4303.hitungbmi.databinding.ActivityMainBinding
+import org.d3if4038.hitungbmi.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

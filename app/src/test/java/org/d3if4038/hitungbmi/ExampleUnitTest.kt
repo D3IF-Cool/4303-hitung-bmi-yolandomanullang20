@@ -1,4 +1,4 @@
-package org.d3if4303.hitungbmi
+package org.d3if4038.hitungbmi
 
 import org.junit.Test
 
