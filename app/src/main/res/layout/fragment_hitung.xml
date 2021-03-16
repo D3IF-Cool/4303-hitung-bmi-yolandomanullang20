@@ -150,12 +150,10 @@
             android:id="@+id/kategoriTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginTop="8dp"
             android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/bmiTextView"
-            app:layout_constraintHorizontal_bias="0.516"
-            app:layout_constraintStart_toStartOf="@+id/bmiTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bmiTextView"
             tools:text="Kategori: Ideal" />
 
@@ -163,29 +161,33 @@
             android:id="@+id/saranButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:text="@string/lihat_saran"
-            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/kategoriTextView"
-            app:layout_constraintTop_toBottomOf="@+id/kategoriTextView"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintEnd_toStartOf="@id/shareButton"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/kategoriTextView" />
 
         <Button
             android:id="@+id/shareButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="16dp"
             android:text="@string/bagikan"
-            app:layout_constraintBottom_toBottomOf="@+id/saranButton"
-            app:layout_constraintStart_toEndOf="@+id/kategoriTextView"
-            app:layout_constraintTop_toTopOf="@+id/saranButton" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/saranButton"
+            app:layout_constraintTop_toTopOf="@id/saranButton" />
+
         <androidx.constraintlayout.widget.Group
             android:id="@+id/buttonGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="invisible"
-            app:constraint_referenced_ids="saranButton,shareButton"
+            app:constraint_referenced_ids="saranButton, shareButton"
             tools:visibility="visible" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

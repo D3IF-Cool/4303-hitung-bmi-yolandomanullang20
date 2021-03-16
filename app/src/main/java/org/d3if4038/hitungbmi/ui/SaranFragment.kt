@@ -1,6 +1,7 @@
 package org.d3if4038.hitungbmi.ui
 
 import android.os.Bundle
+import android.text.Layout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,12 +13,13 @@ import org.d3if4038.hitungbmi.data.KategoriBmi
 import org.d3if4038.hitungbmi.databinding.FragmentSaranBinding
 
 class SaranFragment : Fragment() {
-    private val args: SaranFragmentargs by navArgs()
+    private val args: SaranFragmentArgs by navArgs()
     private lateinit var binding: FragmentSaranBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        binding = FragmentSaranBinding.inflate(layoutInflater, container, false)
+        binding = FragmentSaranBinding.inflate(
+            layoutInflater, container, false)
         updateUI(args.kategori)
         return binding.root
     }
