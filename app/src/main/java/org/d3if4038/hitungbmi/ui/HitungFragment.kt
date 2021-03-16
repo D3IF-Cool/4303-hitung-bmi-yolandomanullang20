@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import org.d3if4038.hitungbmi.R
 import org.d3if4038.hitungbmi.data.KategoriBmi
 import org.d3if4038.hitungbmi.databinding.FragmentHitungBinding
