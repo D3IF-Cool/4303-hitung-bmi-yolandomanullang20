@@ -4,12 +4,17 @@
     app:startDestination="@id/hitungFragment">
 
     <fragment
+        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/hitungFragment"
         android:name="org.d3if4038.hitungbmi.ui.HitungFragment"
-        android:label="HitungFragment" >
+        android:label="HitungFragment"
+        tools:layout="@layout/fragment_saran">
         <action
             android:id="@+id/action_hitungFragment_to_saranFragment"
             app:destination="@id/saranFragment" />
+        <argument
+            android:name="kategori"
+            app:argType="org.d3if4038.hitungbmi.data.KategoriBmi" />
     </fragment>
     <fragment
         android:id="@+id/saranFragment"
