@@ -2,11 +2,10 @@ package org.d3if4038.hitungbmi.ui
 
 import android.os.Bundle
 import android.text.TextUtils
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation.findNavController
 import androidx.navigation.findNavController
 import org.d3if4038.hitungbmi.R
 import org.d3if4038.hitungbmi.data.KategoriBmi
@@ -29,7 +28,19 @@ class HitungFragment : Fragment() {
                 actionHitungFragmentToSaranFragment(kategoriBmi)
             )
         }
+        setHasOptionsMenu(true)
         return binding.root
+    }
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.options_menu, menu)
+    }override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.menu_about) {
+            findNavController().navigate(
+                R.id.action_hitungFragment_to_aboutFragment)
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun resetForm() = with(binding) {
