@@ -3,6 +3,7 @@ package org.d3if4038.hitungbmi.data
 import org.d3if4038.hitungbmi.db.BmiEntity
 
 object HitungBmi {
+
     fun hitung(data: BmiEntity): HasilBmi {
         val tinggiCm = data.tinggi / 100
         val bmi = data.berat / (tinggiCm * tinggiCm)
